@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>figure 태그 활용</h3>
+	<hr>
+	<figure id="1-1">
+		<!-- 삽화나 다이어그램, 사진 등과 같이 
+		문서의 주요 흐름과는 독립적인 콘텐츠를 정의할 때 사용 -->
+		<figcaption>alert() 함수 활용</figcaption>
+		<!-- figcaption 독립된 콘텐츠의 설명 -->
+		<pre>
+	<code>function f(){ alert("경고합니다"); }</code>
+			<!-- code 태그는 문서 내에서 코드 표시 -->
+		</pre>
+		<hr>
+		<small>실행결과</small>
+		<pre>
+		<img src="media/alert.png" alt="실행결과">
+	</pre>
+	</figure>
+
+	<h3>details와 summary 태그</h3>
+	Q &amp; A리스트
+	<hr>
+	<details>
+		<!-- 부가 설명이 있는 항목에 사용. 클릭으로 세부 항목 표시  -->
+		<summary>Question 1</summary>
+		<!-- 제목  -->
+		<p>웹 개발자가 알아야 하는 언어 3 가지?</p>
+		<!-- 세부사항 -->
+	</details>
+	<details>
+		<summary>Answer 1</summary>
+		<p>HTML5, CSS, Javascript</p>
+	</details>
+
+
+
+	<h3>인라인 시맨틱 태그 사례</h3>
+	<hr>
+	<p>
+		내일
+		<mark>HTML5 시험</mark>
+		<br>
+		<!-- 형광펜 효과.  -->
+		시간은
+		<time>09:00</time>
+		<br> 난이도
+		<meter value="0.8" max="1.0">80%</meter>
+		<br> 자료 업로딩(20%)
+		<progress value="2" max="10"></progress>
+		<br>
+	</p>
+
+
+	<h3>로그인 폼</h3>
+	<hr>
+	<!-- 요청 페이지. -->
+	<form name="fo" method="get">
+		<!-- 한 페이지 내에 여러개의 폼이 존재 할 수 있음. -->
+		<!-- 한 페이지 내에 폼과 폼을 구분하기 위한 name 속성. -->
+		<!-- method 속성은 전송 방식. -->
+		<!-- action 속성을 주면, 그 페이지에서 요청에 대한 응답하게 함. -->
+		사용자 ID : <input type="text" size="15" value=""><br> 비밀 번호
+		: <input type="password" size="15" value=""> <input
+			type="submit" value="완료">
+	</form>
+
+	<p>
+	<h3>자기 소개서 작성</h3>
+	<hr>
+	<form>
+		이름 : <input type="text" value=""><br> 암호 : <input
+			type="password" value="" maxlength="4"><br> 자소서 :
+		<textarea cols="20" rows="5">이곳에 자기소개서 작성</textarea>
+	</form>
+
+
+	<h3>가보고 싶은 곳</h3>
+	<hr>
+	<form>
+		나라 : <input type="text" name="country" list="countries"><br>
+		<datalist id="countries">
+			<option value="가나">
+			<option value="스위스">
+			<option value="브라질">
+		</datalist>
+		보고싶은것 : <input type="text" list="what"><br>
+		<datalist id="what">
+			<option value="산">
+			<option value="바다">
+			<option value="도시">
+		</datalist>
+	</form>
+	
+	
+	
+<h3>버튼을 만들자</h3>
+<hr>
+<form>
+검색 : <input type="text" size="10" value="">
+	<input type="button" value="Q1">
+	<button type="button">Q2</button><br>
+submit 버튼 : <input type="submit" value="전송1">
+		<button type="submit">전송2</button><br>
+reset 버튼 : <input type="reset" value="리셋1">
+		<button type="reset">리셋2</button><br>
+이미지버튼 : <input type="image" src="media/button.png" alt="이미지 버튼">
+		<button type="button"><img src="media/button.png" alt="이미지 버튼"></button>
+</form>	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기본 구조를 가진 표 만들기</title>
+</head>
+<body>
+<h3>기본 구조를 가진 표</h3>
+<hr>
+<table border="1">
+	<caption>1학기 성적</caption><!-- 표의 제목 -->
+	<thead><!-- 테이블 헤드, 항목명  -->
+		<tr><!-- table row  -->
+		<th><!-- 1칸  -->이름</th><th>HTML</th><th>CSS</th></tr>
+	</thead>
+	<tbody>
+		<tr><td colspan="2">황기태</td><td>70</td></tr>
+		<tr><td>이재문</td><td>95</td><td rowspan="2">99</td></tr>
+		<tr><td>이병은</td><td>40</td></tr>
+	</tbody>	
+	<tfoot><!-- 표의 끝 부분 -->
+		<tr><th>합</th><th>225</th><th>230</th></tr>
+	</tfoot>
+</table>
+<hr>
+<table border="1">
+<thead style="background-color:skyblue;">
+	<tr><td colspan="3" align="center" style="background-color:blue;"><span style="color:white;">오늘의 수입/지출</span></td></tr>
+	<tr><td>내용</td><td>수입</td><td>지출</td></tr>
+</thead>
+<tbody>
+	<tr><td>월급!</td><td>1,000,000</td><td></td>
+	<tr><td>점심값</td><td></td><td>5,000</td>
+	<tr><td>부모님선물</td><td></td><td>30,000</td>
+</tbody>
+<tfoot>
+	<tr><td rowspan="3" style="background-color:skyblue;">총계</td><td>수입</td><td>지출</tr>
+	<tr><td>1,000,000</td><td>35,000</td>
+	<tr><td>남은돈</td><td>965,000</td>
+</tfoot>
+</table>
+
+<hr>
+<h3>표에 이미지 삽입</h3>
+<hr>
+<table>
+	<caption>좋아하는과일</caption>
+	<tbody>
+		<tr>
+			<td><img src="media/apple.png"></td>
+			<td><img src="media/banana.png"></td>
+			<td><img src="media/mango.png"></td>
+		</tr>		
+	</tbody>
+</table>
+<hr>
+
+<h3>링크 만들기</h3>
+<hr>
+포털 사이트
+<ul>
+	<li><a href="http://www.naver.com">네이버</a></li>
+	<li><a href="http://www.daum.net">다음</a></li>
+</ul>>
+신문 사이트
+<ul>
+	<li><a href="http://etnewscom">
+		<img src="media/iconetnews.png">
+		</a>
+	</li>
+	<li><a href="http://chosun.com">
+		<img src="media/iconchosun.png" alt="조선일보">
+		</a>
+	</li>
+</ul>	
+<hr>
+<a href="ex2-17.html">예제 2-17로 이동</a>
+
+</body>
+</html>

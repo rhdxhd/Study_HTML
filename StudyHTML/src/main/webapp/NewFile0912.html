@@ -1,0 +1,63 @@
+<!-- ctrl + shift + o + f + s 차례로 누르면 전체 줄 정렬 -->
+<!-- 주석: ctrl + shift + / : 컴퓨터에 영향을 주지 않고, 사람이 이해하기 편하도록 설명을 추가하는 것. -->
+<!-- ctrl + (shift) + s : (전체저장) 현재화면저장  -->
+<!-- ctrl + shift + (+/-) : 화면 글씨크기 조절  -->
+<!-- alt + Print Screen SysRq : 실행창만 캡처 -->
+<!-- 윈도우버튼 + shift + s : 영역지정 캡처 -->
+<!DOCTYPE html><!--html5 형식의 문서라고 알림.  -->
+<html><!-- 태그의 사용은 러시아 마트료시카 인형처럼 태그안에 태그 사용 -->
+<head><!-- 페이지의 정보  -->
+<meta charset="UTF-8">
+<title>웹 페이지의 구성 요소</title>
+<style>/* 페이지에 스타일 추가 */
+	body { 
+			background-color: linen; /* 바디 태그의 배경에 새상 지정 */
+		    color: green;/* 바디 태그 안에 글꼴 색상이 녹색 */
+	        margin-left: 40px;/* 좌측 마진 */
+	        margin-right: 40px;
+	         }
+
+	H3 { text-align: center; color: darkred; }
+	
+	HR { height: 5px; border: solid grey;
+	       background-color: grey; }
+
+	SPAN { color: Blue; font-size: 20px; }
+</style>
+<script>/* 특정 조건 만족시 아래 스크립트 구동 */
+/* 자바스크립트의 fuction 은 java 의 method 와 비슷합니다. */
+	function show() { // <img>에 이미지 달기
+		document.getElementById("fig").src = "ElvisPresley.png"
+		document.getElementById("fig2").src = "ElvisPresley.png"
+		/* 현재 페이지에서 id가 fig인 요소를 가져와서 src 속성을 변경 */
+	}
+	function hide() { // <img>에 이미지 제거
+		document.getElementById("fig").src="";
+		document.getElementById("fig2").src="";
+	}
+
+</script>
+</head>
+<!-- id : 유일한 식별자.
+class : 반복 사용 가능. -->
+<body>
+	<h1 title="h1태그로 작성하였습니다.">1장 홈페이지</h1>
+	<h2 title="h2태그로 작성하였습니다.">1절 HTML 언어</h2>
+	<h3 onmouseover="show()" onmouseout="hide()">Elvis Presley</h3>
+	<!-- 제목 지정 -->
+	<hr>
+	<div><!-- divide 줄임말. 영역을 나누는 역할.  -->
+		<img id="fig" src=""><!-- 이미지 표시용 태그  -->
+	</div>
+	<hr>
+	<div>
+	    <img id="fig2" src="">
+	</div>
+	<!-- 수평선 -->
+	He was an American signer and actor. In November 1956, he mad ehis film
+	debut in
+	<span style="color: blue"> Love Me Tender</span>. He is often reffered
+	to as
+	<span>the King of Rock and Roll</span>".
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>먹고 싶은 것 모두 체크하세요</h3>
+	<hr>
+	<form action="NewFile1.jsp">
+		<!-- 체크박스는 여러개 선택 가능, 라이도버튼은 1개만 선택 가능.  -->
+		짜장면 <input type="checkbox" value="1"> 짬뽕 <input
+			type="checkbox" value="2" checked> 탕수육 <input type="checkbox"
+			value="3"> <input type="submit">
+	</form>
+
+
+	<h3>먹고 싶은 것 하나만 선택?</h3>
+	<hr>
+	<form>
+		<input type="radio" name="china" value="1">
+		 짜장면<img src="media/jajang.png"><br>
+		<input type="radio"	name="china" value="2" checked>
+		 짬뽕<img src="media/jjambbong.png"><br>
+		<input type="radio"	name="china" value="3">
+		 탕수육<img src="media/tangsuyuk.png">
+	</form>
+
+
+
+	<h3>오늘 점심은?</h3>
+	<hr>
+	<form>
+		<select name="china">
+			<option value="1">짜장면</option>
+			<option value="2" selected>짬뽕</option>
+			<option value="3">탕수육</option>
+		</select>
+	</form>
+
+
+
+	<h3>&lt;label&gt;태그로 로그인 폼 만들기</h3>
+	<hr>
+	<form name="fo" method="get">
+		<label>사용자 ID : <input type="text" size="15" value=""></label><br>
+		<label for="pass">비밀 번호 : </label> <input id="pass" type="password"
+			size="15" value=""> <input type="submit" value="완료">
+
+	</form>
+
+
+
+
+	<h3>먹고 싶은 것 하나만 선택?(&lt;label&gt;이용)</h3>
+	<hr>
+	<form>
+		<label> <input type="radio" name="china" value="1">
+		 짜장면 <img src="media/jajang.png">
+		</label><br> <label> <input type="radio" name="china" value="2"	checked>
+		 짬뽕 <img src="media/jjambbong.png">
+		</label><br> <label> <input type="radio" name="china" value="3">
+		 탕수육 <img src="media/tangsuyuk.png">
+		</label>
+	</form>
+
+
+
+
+
+<h3>컬러다이얼로그로 색 입력</h3>
+<hr>
+<form>
+색 선택 <input type="color" value="#00BFFF"
+ onchange="document.body.style.color=this.value">
+</form>
+
+
+
+
+<h3>시간 정보 입력 HTML5 폼 요소들</h3>
+초기 세팅 : 2022년 3월 1일 밤 9시 30분(10초 32)<br>
+시간을 변경해 보세요
+<hr>
+<form>
+<pre>
+month: <input type="month" value="2022-03"><br>
+week: <input type="week" value="2022-W09"><br>
+date: <input type="date" value="2022-03-01"><br>
+time: <input type="time" value="21:30"><br> 
+local: <input type="datetime-local" value="2022-09-01T21:30:10.32"><br>
+
+</pre>
+</form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
