@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>div에 박스 그림자 만들기</title>
+<style>
+.redBox {
+	box-shadow : 10px 10px red;
+	}
+.blurBox {
+	box-shadow : 10px 10px 5px skyBlue;
+							/* 오른쪽 아래 블러범위 색상  */
+	}
+.multiEffect {
+	box-shadow : 2px 2px 2px black,
+				0 0 25px blue,
+				0 0 5px darkblue;
+	}
+div {
+	width : 150px;
+	height : 70px;
+	padding : 10px;
+	border : 10px solid lightgray;
+	background-image : url("media/spongebob.png");
+	background-size : 150px 100px;
+	background-repeat : no-reapet;
+	}
+</style>
+</head>
+<body>
+<h3>박스 그림자 만들기</h3>
+<hr>
+<div class="redBox">뚱이와 함께</div><br>
+<div class="blurBox">뚱이와 함께</div><br>
+<div class="multiEffect">뚱이와 함께</div>
+<p>
+
+
+
+
+
+
+
+<h3>마우스 커서</h3>
+아래에 마우스를 올려 보세요. 커서가 변합니다.
+<hr>
+<p style="cursor: crosshair">십자 모양 커서</p>
+<p style="cursor: help">도움말 모양 커서</p>
+<p style="cursor: pointer">포인터 모양 커서</p>
+<p style="cursor: progress">프로그램 실행 중 모양 커서</p>
+<p style="cursor: n-resize">상하 크기 조절 모양 커서</p>
+
+
+
+</body>
+</html>
