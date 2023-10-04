@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비트 연산</title>
+<script>
+	function digit8(v) { //숫자 v를 8비트 2진수로 변환 -> 10
+		let str = "";
+		for (let i = 0; i < 8; i++, v <<= 1) { // i는 0~7
+			// v<<=1; v=v<<1; 좌시프트 연산자는 *2의(곱하기2) 효과
+			// 10은 2진수로      0000 1010 (↓ 왼쪽으로 한칸씩 밀려남. 좌시프트. 왼쪽으로 한칸씩 밀려나고 맨 오른쪽 밀려난 빈자리는 0으로 채움. 우시프트도 반대로 마찬가지 룰 적용)
+			// 10을 좌시프트하면  0001 0100 이고, 이걸 10진수로 보면 20이라서 곱하기 2의 효과임 
+			// 우시프트 연산자는 /2의(나누기2) 효과
+			if ((v & 0x80)) // 1000 0000   // 0은 false, 0이외의 숫자는 전부 true
+				str += "1";
+			else
+				str += "0";
+		}
+		return str;
+	}
+</script>
+</head>
+<body>
+	<h3>비트 논리 연산과 시프트 연산</h3>
+	<hr>
+	<script>
+		let x = 10, y = 3;
+		document.write("<pre>");
+		document.write("x=" + x + ", y=" + y + "<br>"); // x, y 값 출력
+		document.write("x : 		" + digit8(x) + "<br>"); // x 값 출력
+		document.write("y : 		" + digit8(y) + "<br>"); // y 값 출력
+		document.write("<hr>");
+		document.write("x & y  : 	" + digit8(x & y) + "<br>");
+		document.write("x | y  : 	" + digit8(x | y) + "<br>");
+		document.write("x ^ y  : 	" + digit8(x ^ y) + "<br>"); // exclusive or :  같으면 0, 서로다르면 1
+		document.write("~x     : 	" + digit8(~x) + "<br>"); // 비트반전
+		document.write("<hr>");
+		document.write("x << 1 : 	" + digit8(x << 1) + " (" + (x << 1)
+				+ ")<br>");
+		document.write("x >> 1 : 	" + digit8(x >> 1) + " (" + (x >> 1)
+				+ ")<br>");
+		document.write("x >>> 1: 	" + digit8(x >>> 1) + " (" + (x >>> 1) + ")");
+		document.write("</pre>");
+	</script>
+</body>
+</html>
