@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script type="text/javascript">
+   function func(a, b, opp) { // 함수 작성
+      let re = document.getElementById("result");
+
+      switch (opp) {
+      case "add":
+         re.innerHTML = "3 + 2 = " + (a + b);
+         break;
+      case "minus":
+         re.innerHTML = "3 - 2 = " + (a - b);
+         break;
+      case "mul":
+         re.innerHTML = "3 * 2 = " + (a * b);
+         break;
+      case "div":
+         re.innerHTML = "3 / 2 = " + (a / b);
+         break;
+      }
+   }
+</script>
+</head>
+<body>
+   <h3>함수 adder()</h3>
+   <hr>
+   숫자3과 숫자2의 아래 연산 결과는,<br>
+   <!-- 버튼 -->
+   <input type="button" value="add" onclick="func(3,2,'add')" />
+   <input type="button" value="minus" onclick="func(3,2,'minus')" />
+   <input type="button" value="mul" onclick="func(3,2,'mul')" />
+   <input type="button" value="div" onclick="func(3,2,'div')" />
+
+   <div id="result"></div>
+</body>
+</html>
