@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 객체의 메소드 활용</title>
+</head>
+<body>
+<h3>String 객체의 메소드 활용</h3>
+<hr>
+<script>
+	let a = new String("Boys and Girls");
+	let b = "!!";
+	document.write("a : " + a + "<br>");
+	document.write("b : " + b + "<br><hr>");
+
+	document.write(a.charAt(0) + "<br>"); //0번째 인덱스의 문자 리턴
+	document.write(a.concat(b, "입니다") + "<br>");
+	document.write(a.indexOf("s") + "<br>"); // 문자를 주면 위치를 리턴
+	document.write(a.indexOf("And") + "<br>"); //못찾으면 -1
+	document.write(a.indexOf("and") + "<br>"); // 5리턴, 시작 위치.
+	
+	document.write(a.slice(5, 8) + "<br>"); // 5부터 8전까지 가져오기
+	document.write(a.substr(5, 3) + "<br>");// 5부터 3글자 가져오기
+	document.write(a.toUpperCase() + "<br>"); //대문자
+	document.write(a.replace("and", "or") + "<br>");
+	document.write("   kitae   ".trim() + "<br><hr>"); //trim은 공백을 지워준다.
+
+	let sub = a.split(" "); // -> 공백을 이용해서 나누겠다.  // 주어진 문자로 분리하여 배열 리턴.
+	document.write("a를 빈칸으로 분리<br>");
+	for(let i=0; i<sub.length; i++)
+		document.write("sub" + i + "=" + sub[i] + "<br>");
+
+	document.write("<hr>String 메소드를 실행 후 a와 b 변함 없음<br>");
+	document.write("a : " + a + "<br>");
+	document.write("b : " + b + "<br>");
+</script>
+</body>
+</html>
