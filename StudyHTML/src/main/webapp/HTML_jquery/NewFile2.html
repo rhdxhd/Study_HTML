@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+	<a href="http://www.w3schools.com"> 사이트 링크 A</a>
+	<br />
+	<a href="http://www.w3schools.com"> 사이트 링크 B</a>
+	<br />
+	<a href="http://www.w3schools.com" target="_blank"> 사이트 링크 C</a>
+	<br />
+	<button id="link">링크 없애기</button>
+	<button id="link2">target='_blank'</button>
+	<button id="link3">target!='_blank'</button>
+	<button id="btn">버튼제어</button>
+
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>생년월일</th>
+		</tr>
+		<tr>
+			<td>김길동</td>
+			<td>2015-00-00</td>
+		</tr>
+		<tr>
+			<td>이길동</td>
+			<td>2015-00-00</td>
+		</tr>
+		<tr>
+			<td>박길동</td>
+			<td>2015-00-00</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>2015-00-00</td>
+		</tr>
+		<tr>
+			<td>정길동</td>
+			<td>2015-00-00</td>
+		</tr>
+	</table>
+	<button id="odd">홀수선택</button>
+	<button id="even">짝수선택</button>
+</body>
+<script>
+	function turnBack() {
+		setTimeout(function() {
+			$("*").show();
+		}, 3000);
+	}
+
+	$("#link").click(function() {
+		$("[href]").hide();
+		turnBack();
+	});
+
+	$("#link2").click(function() {
+		$("a[target='_blank']").hide();
+		turnBack();
+	});
+
+	$("#link3").click(function() {
+		$("a[target!='_blank']").hide();
+		turnBack();
+	});
+
+	$("#btn").click(function() {
+		$(":button").text("텍스트 변경");
+	});
+	//홀수선택
+	$("#odd").click(function() {
+		$("tr:odd").css("background-color", "#EDE8E8");
+		$("tr:even").css("background-color", "white");
+	});
+	//짝수선택
+	$("#even").click(function() {
+		$("tr:even").css("background-color", "#DCFFDE");
+		$("tr:odd").css("background-color", "white");
+	});
+</script>
+</html>

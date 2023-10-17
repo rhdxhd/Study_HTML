@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+	<h1>H1 태그...</h1>
+	<p>태그만 있는 녀석, 그리고 첫번째 p</p>
+	<p class="cls">클래스 가 있는 녀석</p>
+	<p id="demo">아이디가 있는 녀석</p>
+	<button id="none">다 없애라!!</button>
+	<button id="show">p.cls 없애라!!</button>
+	<button id="first">첫번째 p</button>
+	<p>List 1:</p>
+	<ul>
+		<li>Coffee</li>
+		<li>Milk</li>
+		<li>Tea</li>
+	</ul>
+
+	<p>List 2:</p>
+	<ul>
+		<li>Coffee</li>
+		<li>Milk</li>
+		<li>Tea</li>
+	</ul>
+	<button id="first_ul">ul의 첫번째 li</button>
+	<button id="all_ul">전체 ul의 첫번째 li</button>
+</body>
+<script>
+	//모든 태그
+
+	$("#none").click(function() {
+		console.log($("*")); //별은 모든요소 선택자 selects all elements
+		$("*").hide();
+		turnBack();//최신버전에서 스크립트도 보이는 현상
+	});
+
+	function turnBack() {
+		setTimeout(function() {
+			$("*").show();
+		}, 3000);
+	}
+
+	//p태그 중에서 클래스가 cls
+	$("#show").click(function() {
+		$("p.cls").hide();
+		turnBack();
+	});
+
+	//첫번째 p
+	$("#first").click(function() {
+		$("p:first").css("color", "red");
+	});
+
+	//현재  선택한 태그
+	$("p").click(function() {
+		console.log(this);
+		var id = $(this).attr("id");
+		console.log(id);
+	});
+
+	$("#first_ul").click(function() {
+		//첫번째 ul의 첫번째 li
+		$("ul li:first").hide();
+		turnBack();
+	});
+
+	$("#all_ul").click(function() {
+		//전체 ul 의 첫 자식 li
+		$("ul li:first-child").hide();
+		turnBack();
+	});
+</script>
+</html>
