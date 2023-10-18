@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</script>
+      <style>
+      div{
+         position: absolute;
+         background-color: yellow;
+         left: 5px;
+         width: 90px;
+         height: 90px;
+         margin: 5px;
+      }
+      </style>
+   </head>
+   <body>
+      <button id="left">◀</button>
+      <button id="right">▶</button>
+      <button id="stop">■</button>
+      <button id="special">★</button>
+      <button id="step">step</button>
+      <div id="obj"></div>
+   </body>
+   <script>
+      $("#right").click(function(){
+         $("#obj").animate({"left":"+=1000"},"slow","swing");
+      });
+      
+      $("#left").click(function(){
+         $("#obj").animate({"left":"-=1000"},"slow","linear");
+      });
+      
+      $("#stop").click(function(){
+         $("#obj").stop();
+      });
+      
+      $("#special").click(function() {
+         $("#obj").animate({
+            width: ["toggle", "swing"],
+            height: ["toggle", "swing"],
+            opacity: "toggle"
+         }, 1500, "linear", function() {
+            alert("애니메이션 끝");
+         }); // 너비, 높이, 투명도에 대하여 애니메이션 처리를 토글하고 처리가 완료되면 알림창 표시.
+      });
+      
+      $("#step").click(function(){
+         $("#obj").animate({"left":"+=500"},"slow").animate({"top":"+=500"},"slow").animate({"left":"-=500"},"slow").animate({"top":"-=400"},"slow");
+         // 플러스면 내려오고 마이너스면 올라가고.
+      });
+   </script>
+</html>

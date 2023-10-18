@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+	<p>
+		ID : <input type="text" id="test" value="" />
+		<button id="goLink">확인</button>
+	</p>
+	<a href="#">링크 이동</a>
+
+
+</body>
+<script>
+// 문서 준비 함수를 쓰는 경우와 안 쓰는 경우의 차이는 무엇인가?
+// 풀이: 일반적으로는 사용하는 것이 맞으나, 브라우저 호환성으로 생략해도 동일 동작.		
+
+	$(document).ready(function() { //문서가 준비되고,
+		$("#goLink").click(function() { //버튼을 클릭 했다면,
+			var userId = $("#test").val();
+			if (userId == "admin") {
+				$("a").attr("href", "http://www.icia.or.kr");
+			} else {
+				$("a").attr("href", "http://www.google.co.kr");
+			}
+		});
+	});
+</script>
+</html>

@@ -16,7 +16,7 @@
       <button id="visible">Fade In</button>
       <button id="invisible">Fade Out</button>
       <button id="onOff">Fade Toggle</button>
-      <img src="btn.png" width="50px" height="50px"></img>
+      <img src="media/btn.png" width="50px" height="50px"></img>
       <div style="background-color:red;"></div>
       <div style="background-color:green;"></div>
       <div style="background-color:blue;"></div>      
@@ -25,10 +25,11 @@
    $("button").click(function(){
       var txt = $(this).text();
       console.log(txt);
-   });
+   }); //확인용.
    
-   $("#visible").click(function(){
+   $("#visible").click(function(){ // 아이디 비저블을 클릭힌다면,
       $("div").first().fadeIn("fast", function(){
+    	  //div 첫번째 요소를 가져와서 페이드인 처리, 빠르게, 메소드호출.
          $(this).next("div").fadeIn("fast", function(){
             $(this).next("div").fadeIn("fast");
          });
@@ -49,11 +50,11 @@
    
    $("img").hover(function(){
       $("img").fadeTo("slow", 0.15,function(){
-         $("img").attr("src","btn2.png");
+         $("img").attr("src","media/btn2.png");
       });
    },function(){
       $("img").fadeTo("slow", 1,function(){
-         $("img").attr("src","btn.png");
+         $("img").attr("src","media/btn.png");
       });      
    })
    </script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <title>엘리먼트 가져오기</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <style></style>
+    </head>
+    <body>
+        <input type="text" value="some text"/>
+        <p>문자가 쓰여진<b>강조된</b> 영역</p>
+        <span id="txt"></span>
+        <span id="html"></span>
+        <fieldset>
+            <legend>숫자 입력</legend>
+            RANGE(0~100) :
+            <input id="point" type="range" min="0" max="100" value=30 step=1>
+            당신이 선택한 값 : 
+            <span id="msg"></span>
+            <br>
+            <button id="inc">증가</button>
+            <button id="dec">감소</button>
+        </fieldset>
+        <fieldset>
+            <legend>라디오버튼</legend>
+            <div>                
+                <input name="front" type="radio" value="HTML"/>
+                HTML
+            </div>
+            <div>                
+                <input name="front" type="radio" value="CSS"/>
+                CSS
+            </div>
+            <div>                
+                <input name="front" type="radio" value="JS"/>
+                JS
+            </div>   
+            <span id="selected">선택값 없음</span>
+        </fieldset>
+    </body>
+    <script>
+        var radio = $(":radio"); //가상 선택자, 라디오 버튼 관련 요소 모두 지칭.
+        console.log(radio);
+        $(radio).click(function(){ // 라디오 버튼 관련 요소에서 클릭이 발생한다면,
+            var val = $(this).val() // 클릭 발생된 요소의 값을 변수에 할당.
+            $("#selected").html("당신의선택값 : "+val);
+        // .text 문자열만 대입     .html 문자열과 태그까지 대입
+        });
+                
+        var i = $("#point").val(); // 가로 막대의 점수 가져오기.
+        
+        $("#inc").click(function(){
+            i++;
+            $("#point").val(i);
+            $("#msg").html(i);
+        });
+        
+        $("#dec").click(function(){
+            i--;
+            $("#point").val(i);
+            $("#msg").html(i);
+        });
+        
+        
+        $("#point").change(function(){
+            var val = $(this).val();
+            i = val;
+            console.log(val);
+            $("#msg").html(val);
+        });       
+        
+        var txt = $("p").text();
+        var html = $("p").html();
+        console.log(txt);
+        console.log(html);
+        $("#txt").text("<h1>HTML 과 TEXT 차이</h1>");
+        $("#html").html("<h1>HTML 과 TEXT 차이</h1>");
+        var attr = $("input").attr("type");   // 입력창의 타입은 text 임
+        var val = $("input").val(); //value
+        console.log(attr);
+        console.log(val);        
+        $("input").attr("type","password");  // 타입을 pw로 바꿔줌
+        
+        
+        
+    </script>
+</html>
