@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+header {
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 150%;
+	height: 80px;
+	background: #4169E1; 
+	text-align: center;
+}
+	
+
+nav {
+	width: 100%;
+	height: 50px;
+	background: #AD9AEE;	
+}
+
+section {
+
+	width: 100%;
+	height: 250px;
+	background: #dcdcdc;
+}
+
+footer {
+
+	width: 100%;
+	height: 80px;
+	background: #0A6ECD;
+}
+
+h2 {
+
+	text-align: center;
+}
+
+h3 {
+	margin: 0 0 0 0;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+body { margin:0;}
